@@ -1,0 +1,15 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+#include <string>
+#include "Unit2.h"
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+Sudoku *bord[9][9];
+__fastcall Sudoku::Sudoku(TComponent* Owner) : TEdit(Owner){
+}
+
+void Sudoku::setXY(UnicodeString XY){
+	Name = XY;
+}

@@ -1,0 +1,24 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+#include <string>
+#include "Unit2.h"
+#include "Unit1.h"
+#include "Unit3.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+Sudoku *bord[9][9];
+__fastcall Sudoku::Sudoku(TComponent* Owner) : TEdit(Owner){
+		MaxLength = 1;
+		NumbersOnly = true;
+		Font->Size = 19;
+		Font->Color = clWhite;
+		Color = clMedGray;
+		AutoSize = false;
+		Width = 33;
+		Height = 33;
+}
+
+void Sudoku::setXY(UnicodeString XY){
+	Name = XY;
+}
